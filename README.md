@@ -14,9 +14,9 @@
 
 ## Description
 
-Managing the Puppet console's SSL certificates can be automated, but it's not straightforward if you want them to be managed by Lets Encrypt.
+Managing the Puppet [console's SSL certificates](https://www.puppet.com/docs/pe/latest/use_a_custom_ssl_cert_for_the_console.html) can be automated, but it's not straightforward if you want them to be managed by [Let's Encrypt](https://letsencrypt.org).
 
-This module will allow you request, install, and manage valid SSL certs for your console, via Lets Encrypt.
+This module will allow you request, install, and manage valid SSL certs for your console, via [Let's Encrypt](https://letsencrypt.org).
 
 It does require that port 80 on your puppet server is accessible from the internet, and that your puppet servers has a publicly resolvable DNS name.
 
@@ -34,6 +34,8 @@ You **MUST** disable the default `http_redirect` which is created.  This can be 
 `puppet_enterprise::profile::console::proxy::http_redirect::enable_http_redirect: false`
 
 The module will check that it is disabled and will cause a catalog compilation failure if it isn't.
+
+You should also ensure you're not specifying any certificates in `hiera`.  Check the key `puppet_enterprise::profile::console` for any values matching `browser_ssl_cert` and `browser_ssl_private_key`.
 
 ### Beginning with puppet_console_letsencrypt_certs
 
