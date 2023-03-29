@@ -50,13 +50,12 @@ describe 'pe_console_letsencrypt' do
       }
 
       it {
-        is_expected.to contain_exec("restart_nginx").with(
+        is_expected.to contain_exec('restart_nginx').with(
           {
             'refreshonly' => true,
           },
         )
       }
-
     end
   end
 end
