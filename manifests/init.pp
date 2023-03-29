@@ -48,8 +48,8 @@ class pe_console_letsencrypt (
 ) {
   # Lookup the default redirect value
   $default_redirect_enabled = lookup('puppet_enterprise::profile::console::proxy::http_redirect::enable_http_redirect',Boolean,first,true)
-  $hiera_cert = lookup('puppet_enterprise::profile::console::browser_ssl_cert',Varient[String,Boolean],first,false)
-  $hiera_key = lookup('puppet_enterprise::profile::console::browser_ssl_private_key',Varient[String,Boolean],first,false)
+  $hiera_cert = lookup('puppet_enterprise::profile::console::browser_ssl_cert',Variant[String,Boolean],first,false)
+  $hiera_key = lookup('puppet_enterprise::profile::console::browser_ssl_private_key',Variant[String,Boolean],first,false)
 
   # Ensure that the default redirect has been disabled before we begin
   # If it hasn't, we have to fail as it'll end up in a change loop
