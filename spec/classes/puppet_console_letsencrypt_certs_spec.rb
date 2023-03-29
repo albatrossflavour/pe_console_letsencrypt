@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe 'puppet_console_letsencrypt_certs' do
+describe 'pe_console_letsencrypt' do
   on_supported_os.each do |os, os_facts|
     context "on #{os}" do
       let(:facts) { os_facts }
@@ -13,7 +13,7 @@ describe 'puppet_console_letsencrypt_certs' do
 
       it { is_expected.to compile }
       it { is_expected.to compile.with_all_deps }
-      it { is_expected.to contain_class('puppet_console_letsencrypt_certs') }
+      it { is_expected.to contain_class('pe_console_letsencrypt') }
       it { is_expected.to contain_letsencrypt__certonly(os_facts['puppet_server']).with({
         'domains'       => [os_facts['puppet_server']],
         'manage_cron'   => true,

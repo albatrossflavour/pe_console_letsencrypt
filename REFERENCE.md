@@ -6,11 +6,11 @@
 
 ### Classes
 
-* [`puppet_console_letsencrypt_certs`](#puppet_console_letsencrypt_certs): Manage SSL certs for NGINX on PE using letsencrypt
+* [`pe_console_letsencrypt`](#pe_console_letsencrypt): Manage SSL certs for NGINX on PE using letsencrypt
 
 ## Classes
 
-### <a name="puppet_console_letsencrypt_certs"></a>`puppet_console_letsencrypt_certs`
+### <a name="pe_console_letsencrypt"></a>`pe_console_letsencrypt`
 
 Manage SSL certs for NGINX on PE using letsencrypt
 
@@ -19,12 +19,12 @@ Manage SSL certs for NGINX on PE using letsencrypt
 ##### Basic usage
 
 ```puppet
-include puppet_console_letsencrypt_certs
+include pe_console_letsencrypt
 ```
 
 #### Parameters
 
-The following parameters are available in the `puppet_console_letsencrypt_certs` class:
+The following parameters are available in the `pe_console_letsencrypt` class:
 
 * [`nginx_conf_dir`](#nginx_conf_dir)
 * [`letsencrypt_conf_dir`](#letsencrypt_conf_dir)

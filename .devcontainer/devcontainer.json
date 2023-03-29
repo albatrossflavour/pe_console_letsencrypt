@@ -12,6 +12,7 @@
 
 	"extensions": [
 		"puppet.puppet-vscode",
-		"rebornix.Ruby"
+		"rebornix.Ruby",
+		"vscodevim.vim"
 	]
 }

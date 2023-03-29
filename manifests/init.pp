@@ -32,9 +32,9 @@
 #   Where are the PE console certs?
 #
 # @example Basic usage
-#   include puppet_console_letsencrypt_certs
+#   include pe_console_letsencrypt
 #
-class puppet_console_letsencrypt_certs (
+class pe_console_letsencrypt (
   Stdlib::Absolutepath $cert_dir = '/etc/puppetlabs/puppet/ssl',
   Stdlib::Absolutepath $nginx_conf_dir = '/etc/puppetlabs/nginx/conf.d',
   Stdlib::Absolutepath $letsencrypt_conf_dir = '/etc/letsencrypt',
@@ -54,7 +54,7 @@ class puppet_console_letsencrypt_certs (
   #
   # This can be set in hiera or in the console
   if $default_redirect_enabled == true {
-    fail('Could not enable puppet_console_letsencrypt_certs, 
+    fail('Could not enable pe_console_letsencrypt, 
       puppet_enterprise::profile::console::proxy::http_redirect::enable_http_redirect is set to true'
     )
   }
