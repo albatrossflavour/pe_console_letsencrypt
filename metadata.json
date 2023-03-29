@@ -4,7 +4,7 @@
   "author": "albatrossflavour",
   "summary": "Sets up the Puppet console to use letsencrypt provided certificates",
   "license": "Apache-2.0",
-  "source": "",
+  "source": "https://github.com/albatrossflavour/puppet_console_letsencrypt_certs",
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",
