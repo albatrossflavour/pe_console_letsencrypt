@@ -5,12 +5,15 @@
   "summary": "Sets up the Puppet console to use letsencrypt provided certificates",
   "license": "Apache-2.0",
   "source": "https://github.com/albatrossflavour/pe_console_letsencrypt",
+  "project_page": "https://github.com/albatrossflavour/pe_console_letsencrypt",
+  "issues_url": "https://github.com/albatrossflavour/pe_console_letsencrypt/issues",
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",
       "version_requirement": ">= 4.13.1 < 9.0.0"
     },
-    { "name": "puppet-letsencrypt",
+    {
+      "name": "puppet-letsencrypt",
       "version_requirement": ">= 9.0.0 < 10.0.0"
     }
   ],
