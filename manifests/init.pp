@@ -35,7 +35,7 @@
 #   include pe_console_letsencrypt
 #
 class pe_console_letsencrypt (
-  Stdlib::Absolutepath $cert_dir = '/etc/puppetlabs/puppet/ssl',
+  Stdlib::Absolutepath $cert_dir = $facts['puppet_ssldir'],
   Stdlib::Absolutepath $nginx_conf_dir = '/etc/puppetlabs/nginx/conf.d',
   Stdlib::Absolutepath $letsencrypt_conf_dir = '/etc/letsencrypt',
   Stdlib::Absolutepath $docroot = '/var/www',
@@ -77,7 +77,7 @@ class pe_console_letsencrypt (
   }
 
   unless defined(File[$docroot]) {
-    file { '/var/www':
+    file { $docroot:
       ensure => directory,
       owner  => $owner,
       group  => $group,

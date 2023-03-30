@@ -7,3 +7,4 @@ ipaddress6: "FE80:0000:0000:0000:AAAA:AAAA:AAAA"
 is_pe: false
 macaddress: "AA:AA:AA:AA:AA:AA"
 puppet_server: "puppet.puppet.com"
+puppet_ssldir: "/etc/puppetlabs/puppet/ssl"
