@@ -100,7 +100,7 @@ class pe_console_letsencrypt (
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
-    content => epp("${module_name}/cert_vhost.conf.epp", {'server' => $facts['networking']['hostname'], 'port' => $port, 'docroot' => $docroot}),
+    content => epp("${module_name}/cert_vhost.conf.epp", {'server' => $facts['networking']['fqdn'], 'port' => $port, 'docroot' => $docroot}),
     notify  => Exec['restart_nginx'],
   }
 
