@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v0.2.0](https://github.com/albatrossflavour/pe_console_letsencrypt/tree/v0.2.0) (2024-11-XX)
+
+### Added
+- Support for Puppet 8 and PE 2023.8.x compatibility
+
+### Fixed
+- Use fqdn instead of hostname in cert_vhost.conf.epp for proper certificate validation
+- Updated EPP templates for Puppet 8 compatibility
+
+### Changed
+- Updated puppet version requirement to support Puppet 8 (< 9.0.0)
+
 ## [v0.1.0](https://github.com/albatrossflavour/pe_console_letsencrypt/tree/v0.1.0) (2023-03-29)
 
 [Full Changelog](https://github.com/albatrossflavour/pe_console_letsencrypt/compare/360e12e15f3e898d50b7cecc43bdc00cb503ec09...v0.1.0)
