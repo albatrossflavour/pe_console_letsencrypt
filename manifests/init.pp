@@ -62,7 +62,7 @@ class pe_console_letsencrypt (
   }
 
   if $hiera_cert or $hiera_key {
-    fail('Existing entires exist for the browser ssl ert and private key')
+    fail('Existing entries exist for the browser ssl cert and private key')
   }
 
   if $manage_letsencrypt {
