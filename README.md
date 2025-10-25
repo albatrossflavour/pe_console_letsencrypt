@@ -57,3 +57,7 @@ Only works with Puppet Enterprise
 Fork, develop, submit a pull request
 
 Please make sure all pull requests include testing and that the tests pass
+
+## Contributors
+
+- [kenyon](https://github.com/kenyon) - Typo fixes, fullchain.pem correction, dependency updates

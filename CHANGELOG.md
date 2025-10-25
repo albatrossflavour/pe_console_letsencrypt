@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
-## [v0.2.0](https://github.com/albatrossflavour/pe_console_letsencrypt/tree/v0.2.0) (2024-11-XX)
+## [v0.3.0](https://github.com/albatrossflavour/pe_console_letsencrypt/tree/v0.3.0) (2025-10-25)
+
+### Fixed
+- Fixed typos in error messages
+- Use fullchain.pem instead of cert.pem for proper certificate chain validation
+
+### Changed
+- Updated puppetlabs-stdlib dependency to support versions up to 10.x
+- Updated puppet-letsencrypt dependency to support versions up to 14.x
+
+## [v0.2.0](https://github.com/albatrossflavour/pe_console_letsencrypt/tree/v0.2.0) (2025-08-04)
 
 ### Added
 - Support for Puppet 8 and PE 2023.8.x compatibility
