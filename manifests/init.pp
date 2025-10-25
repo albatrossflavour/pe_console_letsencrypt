@@ -117,7 +117,7 @@ class pe_console_letsencrypt (
     group     => $group,
     links     => 'follow',
     mode      => $mode,
-    source    => "${letsencrypt_conf_dir}/live/${facts['puppet_server']}/cert.pem",
+    source    => "${letsencrypt_conf_dir}/live/${facts['puppet_server']}/fullchain.pem",
     backup    => '.puppet_bak',
     notify    => Service['pe-nginx'],
     require   => Exec['restart_nginx'],
